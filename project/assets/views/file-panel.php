@@ -1,3 +1,9 @@
+    <?php
+
+    require dirname(__FILE__).'/../helpers/getFiles.php';
+
+    ?>
+    
     <article class="container_filepanel">
         <section class="section">
             <div class="container_path">
@@ -14,10 +20,14 @@
             </div>
             <div class="container_files">
                 <div class="file_info__group">
+
+                <!-- <?php foreach($currentDir as $k => $v):?>
+                <?php endforeach; ?> -->
+
                     <div class="file_info__icon">
                         <img  src="../img/word_icon.png" alt=""/>
                     </div>
-                    <p class="file_info__name">Project.doc</p>
+                    <p class="file_info__name"><?=$v?></p>
                     <p class="file_info__type">doc</p>
                     <p class="file_info__size">20KB</p>
                     <p class="file_info__created">02-02-2021</p>

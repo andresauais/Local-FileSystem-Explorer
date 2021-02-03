@@ -10,9 +10,14 @@
   <title>File Explorer</title>
 </head>
 <body>
-  <nav></nav>
+    <?php include('./assets/views/nav.php')?>
   <main>
-    <?php include 'assets/views/directorypanel.php'; ?>
+    <?php 
+    include 'assets/views/directorypanel.php'; 
+    include('./assets/views/file-panel.php');
+    include('./assets/views/file-view.php');
+    ?>
+    
   </main>
 <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
 </body>
