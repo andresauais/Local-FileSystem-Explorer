@@ -24,75 +24,74 @@
 .bx-right-arrow, .bxs-folder-open{
   color: gray;
 }
-        *{
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-            color: #3c3c3c;
-        }
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #3c3c3c;
+}
 
-        .section {
-                margin: 20px 0;
-        }
+.section {
+        margin: 20px 0;
+}
 
-        .container_path p {
-            color:  #939393;
-            margin-left: 2%;
-        }
+.container_path p {
+    color:  #939393;
+    margin-left: 2%;
+}
 
-        .container_tags {
-            height: 40px;
-            background-color: #f7f7f7;
-            border-bottom: 2px solid #eee;
-        }
+.container_tags {
+    height: 40px;
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #eee;
+}
 
-        .container_tags,
-        .file_info__group {
-            display:flex;
-            flex-direction:row;
-            justify-content: start;
-            align-items: center;
-        }
+.container_tags,
+.file_info__group {
+    display:flex;
+    flex-direction:row;
+    justify-content: start;
+    align-items: center;
+}
 
-        .tags_name {
-            width: 45%;
-            margin-left: 5%
-        }
+.tags_name {
+    width: 45%;
+    margin-left: 5%
+}
 
-        .tags_type,
-        .tags_size,
-        .file_info__type,
-        .file_info__size {
-            width: 10%;
-            
-        }
+.tags_type,
+.tags_size,
+.file_info__type,
+.file_info__size {
+    width: 10%;
+    
+}
 
-        .tags_created,
-        .tags_modified,
-        .file_info__created,
-        .file_info__modified {
-            width: 15%;
-        }
+.tags_created,
+.tags_modified,
+.file_info__created,
+.file_info__modified {
+    width: 15%;
+}
 
-        .file_info__icon {
-            width: 5%;
-            
-        }
+.file_info__icon {
+    width: 5%;
+    
+}
+.file_info__icon img {
+    height: 40px;
+}
 
-        .file_info__icon img {
-            height: 40px;
-        }
+.file_info__name {
+    width: 45%
+}
 
-        .file_info__name {
-            width: 45%
-        }
+.file_info__group {
+    height: 50px;
+    border-bottom: 2px solid #eee;
+}
 
-        .file_info__group {
-            height: 50px;
-            border-bottom: 2px solid #eee;
-        }
-
-        .container_files {
-            display: flex;
-            flex-direction:column;
-        }
+.container_files {
+    display: flex;
+    flex-direction:column;
+}
