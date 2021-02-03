@@ -1,4 +1,29 @@
 
+/*Directory panel styles*/
+#directoryPanel{
+  border: 1px solid gray;
+  height: 100vh;
+}
+#directoryTree{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.directoryRoot-children{
+  list-style-type: none;
+}
+.list-item{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 2% 0% 2% 0%;
+}
+.list-item_p{
+  margin: 0;
+}
+.bx-right-arrow, .bxs-folder-open{
+  color: gray;
+}
         *{
             margin: 0;
             box-sizing: border-box;
