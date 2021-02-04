@@ -1,3 +1,4 @@
+
 $(".list-item").click(getDir);
 
 function getDir(e){
@@ -17,8 +18,7 @@ function getDir(e){
   else if($(e.target).hasClass('bx-down-arrow')){
     $(e.target).removeClass('bx-down-arrow');
     $(e.target).addClass('bx-right-arrow');
-    $($(e.currentTarget).children().last()).children().remove();
+    $($(e.currentTarget).next()).children().remove();
   }
-  
 }
 //FIX this

@@ -2,10 +2,11 @@
 echo '
 <section id="directoryPanel">
     <ul id="directoryTree">
-        <li id="directoryRoot"  class="list-item">
-            <i class="bx bx-right-arrow"></i>
-            <i class="bx bxs-folder-open"></i>
-            Root
+        <li id="directoryRoot" >
+            <div class="list-item">
+                <i class="bx bx-right-arrow"></i>
+                <p><i class="bx bxs-folder-open"></i>Root</p>
+            </div>
             <ul class="directoryRoot-children"></ul>
         </li>
     </ul>
