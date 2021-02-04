@@ -18,6 +18,8 @@
     include 'assets/views/directorypanel.php'; 
     include './assets/views/file-panel.php';
     include './assets/views/file-view.php';
+    include 'assets/helpers/getDir.php'; 
+
     ?>
   </main>
   <script type="text/javascript" src="assets/helpers/events.js"></script>
