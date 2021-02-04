@@ -2,14 +2,15 @@ $(".list-item").click(getDir);
 
 function getDir(e){
   if($(e.target).hasClass('bx-right-arrow')){
+    console.log($(e.currentTarget).find("p").text());
     $(e.target).removeClass('bx-right-arrow');
     $(e.target).addClass('bx-down-arrow');
     $.ajax({
       type:'POST',
       url: './assets/helpers/getDir.php',
-      data: {'name': 'root'}}).done(//cogerlo dinamico
+      data: {'name': $(e.currentTarget).find("p").text()}}).done(//cogerlo dinamico
         function(data){
-          $(".directoryRoot-children").append(data);//cogerlo dinamico
+          $($(e.currentTarget).next()).append(data);
           $(".list-item").off();
           $(".list-item").click(getDir);
       })
