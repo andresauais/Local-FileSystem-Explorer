@@ -1,4 +1,3 @@
-
 $(".list-item").click(getDir);
 
 function getDir(e){
