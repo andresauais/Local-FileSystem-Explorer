@@ -8,17 +8,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <title>File Explorer</title>
 </head>
 <body>
-    <?php include './assets/views/nav.php'?>
+    <?php include('./assets/views/nav.php')?>
   <main>
     <?php 
     include 'assets/views/directorypanel.php'; 
-    include './assets/views/file-panel.php';
-    include './assets/views/file-view.php';
+    include('./assets/views/file-panel.php');
+    include('./assets/views/file-view.php');
     ?>
+    
   </main>
   <script type="text/javascript" src="assets/helpers/events.js"></script>
 <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>

@@ -32,8 +32,6 @@
       color: #3c3c3c;
   }
 
-/*----- Body -----*/
-
 *{
     margin: 0;
     box-sizing: border-box;
@@ -47,61 +45,18 @@ main {
 }
 
 .section {
-        margin: 10px 0;
-}
-
-/*-----Header-----*/
-
-.container_header {
-    height:100px;
-    background-color: #5068f1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.container_brand {
-    width: 20vw;
-}
-
-.container_brand h1 {
-    padding: 20px;
-    color: white;
-    
+        margin: 20px 0;
 }
 
 .container_navbar {
-    display: flex;
-    align-items: center;
-    width: 60vw;
-    justify-content: space-between;
-    padding: 0 20px 0 10px;
+    height:100px;
+    background-color: #5068f1;
 }
 
-.container_navbar__actions {
-    display: flex;
-    align-items: center;
-
-}
-
-/*-----Forms-----*/
-
-.form_search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.input_text {
-    height: 40px;
+.container_navbar h1 {
     padding: 20px;
-    border-radius: 40px;
-    border: none;
-    outline: none;
+    color: white;
 }
-
-
-/*-----Filepanel-----*/
 
 .container_filepanel {
     width: 60vw;
@@ -121,13 +76,6 @@ main {
     height: 40px;
     background-color: #f7f7f7;
     border-bottom: 2px solid #eee;
-    padding: 0 10px;
-}
-
-.container_files {
-    display: flex;
-    flex-direction:column;
-    margin: 0 10px;
 }
 
 .container_tags,
@@ -143,16 +91,12 @@ main {
     margin-left: 5%
 }
 
-
+.tags_type,
 .tags_size,
+.file_info__type,
 .file_info__size {
     width: 10%;
     
-}
-
-.tags_type,
-.file_info__type {
-    width: 10%;
 }
 
 .tags_created,
@@ -179,45 +123,7 @@ main {
     border-bottom: 2px solid #eee;
 }
 
-
-/*-----Buttons-----*/
-
-button {
-    cursor: pointer;
-}
-
-.btn_add {
+.container_files {
     display: flex;
-    align-items: center;
-    border-radius: 40px;
-    height: 40px;
-    border: none;
-    background-color: white;
-    color: #5068f1;
-    font-weight: 700;
-    font-size: 1.1em;
-    padding: 0 18px;
-    margin-right: 2vw;
-
-}
-
-.btn_add i {
-    color: #5068f1;
-    font-weight: 700;
-    font-size: 1.1em;
-    margin-right: 10px;
-}
-
-.btn_remove,
-.btn_upload,
-.btn_search {
-    background-color: transparent;
-    border: none;
-}
-
-.btn_remove i,
-.btn_upload i,
-.btn_search i {
-    color: white;
-    font-size: 2.9em;
+    flex-direction:column;
 }
