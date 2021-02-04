@@ -22,7 +22,8 @@
 
     ?>
   </main>
-  <script type="text/javascript" src="assets/helpers/events.js"></script>
+  <script type="text/javascript" src="assets/scripts/events.js"></script>
+  <script type="text/javascript" src="assets/scripts/openModal.js"></script>
 <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
 </body>
 </html>

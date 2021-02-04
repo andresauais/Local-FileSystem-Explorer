@@ -25,12 +25,6 @@
     color: gray;
   }
   
-  *{
-      margin: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-      color: #3c3c3c;
-  }
 
 /*----- Body -----*/
 
@@ -94,7 +88,7 @@ main {
 
 .input_text {
     height: 40px;
-    padding: 20px;
+    padding: 10px 20px;
     border-radius: 40px;
     border: none;
     outline: none;
@@ -167,7 +161,7 @@ main {
     
 }
 .file_info__icon img {
-    height: 40px;
+    width: 35px;
 }
 
 .file_info__name {
@@ -219,5 +213,5 @@ button {
 .btn_upload i,
 .btn_search i {
     color: white;
-    font-size: 2.9em;
+    font-size: 2.5em;
 }

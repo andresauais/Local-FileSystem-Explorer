@@ -68,16 +68,19 @@ foreach($currentDir as $k => $v){
 function getFileImage($extension){
     switch($extension) {
         case "txt":
-            $fileImage = "./assets/img/word_icon.png";
+            $fileImage = "./assets/img/txt.png";
             break;
         case "doc":
-            $fileImage = "./assets/img/word_icon.png";
+            $fileImage = "./assets/img/doc.png";
             break;
         case "jpg":
-            $fileImage = "./assets/img/word_icon.png";
+            $fileImage = "./assets/img/jpg.png";
             break;
-        case null:
-            $fileImage = "";
+        case "jpg":
+            $fileImage = "./assets/img/png.png";
+            break;
+        case "":
+            $fileImage = "./assets/img/folder.png";
             break;
         default:
             $fileImage = "";
