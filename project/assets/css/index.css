@@ -1,30 +1,36 @@
-
 /*Directory panel styles*/
 #directoryPanel{
-  border-right: 1px solid gray;
-  height: 100vh;
-  width: 20vw;
-}
-#directoryTree{
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.directoryRoot-children{
-  list-style-type: none;
-}
-.list-item{
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 2% 0% 2% 0%;
-}
-.list-item_p{
-  margin: 0;
-}
-.bx-right-arrow, .bxs-folder-open{
-  color: gray;
-}
+    border-right: 1px solid gray;
+    height: 100vh;
+    width: 20vw;
+  }
+  #directoryTree{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .directoryRoot-children{
+    list-style-type: none;
+  }
+  .list-item{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 2% 0% 2% 0%;
+  }
+  .list-item_p{
+    margin: 0;
+  }
+  .bx-right-arrow, .bxs-folder-open{
+    color: gray;
+  }
+  
+  *{
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      color: #3c3c3c;
+  }
 
 *{
     margin: 0;
