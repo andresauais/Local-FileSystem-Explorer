@@ -300,7 +300,7 @@ input {
     position: relative;
 }
 
-label[for="upload-file"] {
+label[for="file"] {
     font-size: 14px;
     font-weight: 600;
     color: #fff;
@@ -315,7 +315,7 @@ label[for="upload-file"] {
     /* content: "url(../img/upload.png)", */
 }
 
-label[for="upload-file"] img {
+label[for="file"] img {
     color:#5068f1;
     /* padding-right: 10px; */
     position: absolute;

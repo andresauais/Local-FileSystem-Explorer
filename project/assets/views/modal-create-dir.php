@@ -5,10 +5,10 @@
                 <i class='bx bx-x'></i>
             </button>
         </div>
-        <form class="modal_form__group">
-            <label for="name">Directory name</label>
-            <input class="input_text" type="text" name="name"/>
-            <input class="btn_submit" type="submit" value="Add"/>
+        <form class="modal_form__group" method="POST" action="./assets/helpers/create-dir.php">
+            <label for="directory">Directory name</label>
+            <input class="input_text" type="text" name="directory"/>
+            <input class="btn_submit" type="submit" name="submit" value="Add"/>
         </form>
     </section>
 </article>
