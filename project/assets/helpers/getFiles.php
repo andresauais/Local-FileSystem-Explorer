@@ -1,6 +1,6 @@
 <?php
 
-$dir = "../root/folder 1";
+$dir = '../'. $_GET['dir'];
 $scanDir = scandir($dir);
 $currentDir = array_slice( $scanDir, 2 );
 
@@ -42,12 +42,12 @@ foreach($currentDir as $k => $v){
     //get date of file modification and compare it with current date
     //if both are the same, return a string with hour and minute. If not, return string with Y-m-d
     $dateToday = date("Y-m-d");
-    $dateModified = date("Y-m-d", filemtime("../root/folder 1/$v"));
+    $dateModified = date("Y-m-d", filemtime("$dir/$v"));
 
    if($dateToday == $dateModified) {
-        $fileModified = date("H:i", filemtime("../root/folder 1/$v"));
+        $fileModified = date("H:i", filemtime("$dir/$v"));
    } else {
-        $fileModified = date("Y-m-d", filemtime("../root/folder 1/$v"));
+        $fileModified = date("Y-m-d", filemtime("$dir/$v"));
    }
    
 
@@ -58,7 +58,7 @@ foreach($currentDir as $k => $v){
     $file -> name = $fileName;
     $file -> type = $extension;
     $file -> size = $fileSizeString;
-    $file -> created = date("Y-m-d", filectime("../root/folder 1/$v"));
+    $file -> created = date("Y-m-d", filectime("$dir/$v"));
     $file -> modified = $fileModified;
     
    //push each Fileinfo object to the $filesArray

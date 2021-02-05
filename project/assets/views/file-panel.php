@@ -7,7 +7,7 @@
     <article class="container_filepanel">
         <section class="section">
             <div class="container_path">
-                <p>Root>Documents>File 4</p>
+                <p><?=$_GET['dir']?></p>
             </div>
         </section>
         <section class="section">
