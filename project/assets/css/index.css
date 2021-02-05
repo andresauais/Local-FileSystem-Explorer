@@ -1,27 +1,32 @@
-/*Directory panel styles*/
+/*-----Directory panel styles-----*/
 #directoryPanel{
     border-right: 1px solid gray;
     height: 100vh;
     width: 20vw;
-  }
-  #directoryTree{
+}
+#directoryTree{
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-  .directoryRoot-children{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.directoryRoot-children{
     list-style-type: none;
-  }
-  .list-item{
+}
+.list-item{
     display: flex;
     flex-direction: row;
     margin: 0;
     padding: 2% 0% 2% 0%;
-  }
-  .list-item_p{
+}
+.list-item_p{
     margin: 0;
-  }
-  .bx-right-arrow, .bxs-folder-open{
+}
+.bx-right-arrow,
+.bxs-folder-open,
+.bx-down-arrow,
+.bxs-folder{
     color: gray;
   }
   
@@ -61,7 +66,6 @@ main {
 .container_brand h1 {
     padding: 20px;
     color: white;
-    
 }
 
 .container_navbar {
@@ -136,19 +140,14 @@ main {
     width: 45%;
     margin-left: 5%
 }
-
-
 .tags_size,
 .file_info__size {
     width: 10%;
-    
 }
-
 .tags_type,
 .file_info__type {
     width: 10%;
 }
-
 .tags_created,
 .tags_modified,
 .file_info__created,
