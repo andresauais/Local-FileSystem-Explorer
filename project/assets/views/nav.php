@@ -8,13 +8,13 @@
         <div class="container_navbar__actions">
             <form class="form_search" method="POST" action="">
                 <input class="input_text" type="text" name="search-file"/>
-                <button type="submit" class="btn_search">
+                <button type="submit" class="btn_search btn_transparent">
                     <i class='bx bx-search' ></i>
                 </button>
             </form> 
         
-            <button class="btn_remove"><i class='bx bx-trash'></i></button>
-            <button class="btn_upload"><i class='bx bx-upload' ></i></button>
+            <button class="btn_remove btn_transparent"><i class='bx bx-trash'></i></button>
+            <button class="btn_upload btn_transparent"><i class='bx bx-upload' ></i></button>
         </div>
     </nav>
 </header>

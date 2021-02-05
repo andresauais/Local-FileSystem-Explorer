@@ -4,7 +4,7 @@ $dir = "../root/folder 1";
 $scanDir = scandir($dir);
 $currentDir = array_slice( $scanDir, 2 );
 
-//create an Fileinfo class to store file information
+//create a Fileinfo class to store file information
 class Fileinfo {
     public $image;
     public $name;
@@ -21,12 +21,14 @@ $filesArray = array();
 foreach($currentDir as $k => $v){
    
     // get the file extension
-    $filePath = pathinfo($v);
-    if (array_key_exists('extension', $filePath)){
-        $extension = $filePath['extension'];
+    if (array_key_exists('extension', pathinfo($v))){
+        $extension = pathinfo($v)['extension'];
     } else {
         $extension = "";
     }
+
+    //get the file name
+    $fileName = pathinfo($v)['filename'];
 
     //get file size and create a string to print it
     //if filesize is smaller than 1000000bytes, print in KB. If not, print it in MB.
@@ -53,7 +55,7 @@ foreach($currentDir as $k => $v){
     //add values for each object key
     $file = new Fileinfo();
     $file -> image = $fileImage;
-    $file -> name = $v;
+    $file -> name = $fileName;
     $file -> type = $extension;
     $file -> size = $fileSizeString;
     $file -> created = date("Y-m-d", filectime("../root/folder 1/$v"));

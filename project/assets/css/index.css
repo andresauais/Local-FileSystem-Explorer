@@ -82,23 +82,6 @@ main {
 
 }
 
-/*-----Forms-----*/
-
-.form_search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.input_text {
-    height: 40px;
-    padding: 10px 20px;
-    border-radius: 40px;
-    border: none;
-    outline: none;
-}
-
-
 /*-----Filepanel-----*/
 
 .container_filepanel {
@@ -182,7 +165,7 @@ button {
 .btn_add {
     display: flex;
     align-items: center;
-    border-radius: 40px;
+    border-radius: 30px;
     height: 40px;
     border: none;
     background-color: white;
@@ -201,10 +184,8 @@ button {
     margin-right: 10px;
 }
 
-.btn_remove,
-.btn_upload,
-.btn_search {
-    background-color: transparent;
+.btn_transparent {
+    background: transparent;
     border: none;
 }
 
@@ -214,3 +195,142 @@ button {
     color: white;
     font-size: 2.5em;
 }
+
+.btn_submit {
+    color: white;
+    background-color: #5068f1;
+    border-radius:40px;
+    border: none;
+    margin: 10px 0;
+    height: 40px;
+    padding: 0 18px;
+}
+
+/*----- Modals -----*/
+
+.container_modal__background {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #5068f198;
+}
+
+.container_modal__create-dir,
+.container_modal__upload-file {
+    display: none;
+   
+}
+
+.container_modal__create-dir.active,
+.container_modal__upload-file.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_modal__form {
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 30vw;
+}
+
+.modal_header {
+    background-color: #5068f1;
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.modal_header .btn_close i {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    z-index: 2;
+    color: white;
+    font-size: 3em;
+}
+
+.modal_form__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 50px;
+    
+}
+
+/*-----Forms-----*/
+
+.form_search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    outline: none;
+}
+
+.input_text {
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #5068f1;
+    margin: 10px 0;
+}
+
+/*-----File-upload input-----*/
+
+.input_file {
+    /* width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    visibility: hidden; */
+    /* width: 85px; */
+    position: relative;
+}
+
+label[for="upload-file"] {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    /* background-color: black; */
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+    /* content: "url(../img/upload.png)", */
+}
+
+label[for="upload-file"] img {
+    color:#5068f1;
+    /* padding-right: 10px; */
+    position: absolute;
+    font-size: 5em;
+    background-color: white;
+    left:50px;
+    top: 80px;
+    z-index: 10;
+    width: 90px;
+    
+    
+}
+
+.input_search {
+    border: none;
+    
+}
+
