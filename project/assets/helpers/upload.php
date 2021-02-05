@@ -1,12 +1,12 @@
 <?php
 
-if(isset($_POST["submit"]) && $_FILES["fileToUpload"]["name"] !== "") {
+if(isset($_POST["submit"]) && $_FILES["file"]["name"] !== "") {
 
     $target_dir = dirname(__FILE__).'/../../../root/folder 1/';
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $target_file = $target_dir . basename($_FILES["file"]["name"]);
 
-    if ($_FILES["fileToUpload"]["error"] == UPLOAD_ERR_OK) {
-        move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+    if ($_FILES["file"]["error"] == UPLOAD_ERR_OK) {
+        move_uploaded_file($_FILES["file"]["tmp_name"], $target_file);
     } 
 
     $url = "../../";
@@ -14,7 +14,7 @@ if(isset($_POST["submit"]) && $_FILES["fileToUpload"]["name"] !== "") {
     exit();
 
 
-} else if (isset($_POST["submit"]) && $_FILES["fileToUpload"]["name"] == ""){
+} else if (isset($_POST["submit"]) && $_FILES["file"]["name"] == ""){
     $url = "../../";
     header ('Location:' . $url);
     exit();
