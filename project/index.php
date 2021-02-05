@@ -18,6 +18,8 @@
     include 'assets/views/directorypanel.php'; 
     include './assets/views/file-panel.php';
     include './assets/views/file-view.php';
+    include './assets/views/modal-create-dir.php';
+    include './assets/views/modal-upload-file.php';
     include 'assets/helpers/getDir.php'; 
 
     ?>
