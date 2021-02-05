@@ -78,8 +78,11 @@ function getFileImage($extension){
         case "jpg":
             $fileImage = "./assets/img/jpg.png";
             break;
-        case "jpg":
+        case "png":
             $fileImage = "./assets/img/png.png";
+            break;
+        case "pdf":
+            $fileImage = "./assets/img/pdf.png";
             break;
         case "":
             $fileImage = "./assets/img/folder.png";
