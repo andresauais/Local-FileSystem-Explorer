@@ -7,7 +7,7 @@
     <article class="container_filepanel">
         <section class="section">
             <div class="container_path">
-                <p><?=$_GET['dir']?></p>
+                <p><?=(isset($_GET['dir']) ? $_GET['dir'] : "root")?></p>
             </div>
         </section>
         <section class="section">
