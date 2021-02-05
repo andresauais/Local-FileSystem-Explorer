@@ -5,11 +5,11 @@
                 <i class='bx bx-x'></i>
             </button>
         </div>
-        <form class="modal_form__group" method="POST" action="./assets/helpers/upload.php">
+        <form class="modal_form__group" method="POST" action="./assets/helpers/upload.php" enctype="multipart/form-data">
             <!-- <label for="upload-file"><i class='bx bx-upload' ></i></label> -->
             <!-- <label for="upload-file"></label> -->
             <label for="upload-file"><img src="./assets/img/upload.png" alt="upload file" /></label>
-            <input class="input_file" type="file" name="upload-file" id="fileToUpload"/>
+            <input class="input_file" type="file" name="fileToUpload" id="fileToUpload"/>
             <input class="btn_submit" type="submit" name="submit" value="Add"/>
         </form>
     </section>
