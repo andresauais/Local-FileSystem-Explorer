@@ -1,6 +1,6 @@
 <?php
 
-$dir = '../'. $_GET['dir'];
+$dir = '../'. (isset($_GET['dir']) ? $_GET['dir'] : "root");
 $scanDir = scandir($dir);
 $currentDir = array_slice( $scanDir, 2 );
 
