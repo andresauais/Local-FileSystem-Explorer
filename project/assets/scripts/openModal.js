@@ -9,6 +9,11 @@ $('.btn_upload').on('click', function(e){
     e.preventDefault();
     $('.container_modal__upload-file').addClass('active');
 })
+//Opens modal for deleting
+$('.btn_delete-directory').on('click', function(e){
+    e.preventDefault();
+    $('.container_modal__delete').addClass('active');
+})
 
 //To be used for all modal closing events
 $('.btn_close').on('click',function(e){

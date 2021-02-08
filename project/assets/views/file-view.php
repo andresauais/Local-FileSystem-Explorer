@@ -17,7 +17,7 @@ if(isset($_GET['file'])):
             <p class="preview_info">Modified <span><?=$v->modified?></span></p>
         </div>
         <div class="file_update__options">
-        <button class="btn_remove btn_transparent btn_preview"><i class='bx bx-trash'></i></button>
+        <button class="btn_delete-directory btn_transparent btn_preview"><i class='bx bx-trash'></i></button>
             <button class="btn_remove btn_transparent btn_preview"><i class='bx bx-rename'></i></button>
             <button class="btn_remove btn_transparent btn_preview"><i class='bx bx-move-horizontal'></i></button>
         </div>

@@ -227,9 +227,12 @@ button {
     
 }
 
+.btn_delete-directory i,
 .btn_remove i,
 .btn_upload i,
-.btn_search i {
+.btn_search i,
+.btn_rename i,
+.btn_move i{
     font-size: 2.5em;
 }
 
@@ -264,13 +267,15 @@ button {
 }
 
 .container_modal__create-dir,
-.container_modal__upload-file {
+.container_modal__upload-file,
+.container_modal__delete {
     display: none;
    
 }
 
 .container_modal__create-dir.active,
-.container_modal__upload-file.active {
+.container_modal__upload-file.active,
+.container_modal__delete.active {
     display: flex;
     flex-direction: column;
     justify-content: center;

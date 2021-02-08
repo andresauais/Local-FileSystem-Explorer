@@ -20,6 +20,7 @@
     include './assets/views/file-view.php';
     include './assets/views/modal-create-dir.php';
     include './assets/views/modal-upload-file.php';
+    include './assets/views/modal-delete.php';
     include 'assets/helpers/getDir.php'; 
 
     ?>

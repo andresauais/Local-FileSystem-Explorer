@@ -14,7 +14,9 @@
                 </button>
             </form> 
         
-            <button class="btn_remove btn_transparent btn_nav"><i class='bx bx-trash'></i></button>
+            <button class="btn_delete-directory btn_transparent btn_nav"><i class='bx bx-trash'></i></button>
+            <button class="btn_rename btn_transparent btn_nav"><i class='bx bx-rename'></i></button>
+            <button class="btn_move btn_transparent btn_nav"><i class='bx bx-move-horizontal'></i></button>
             <button class="btn_upload btn_transparent btn_nav"><i class='bx bx-upload' ></i></button>
         </div>
     </nav>
