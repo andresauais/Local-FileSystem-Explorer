@@ -46,7 +46,11 @@ main {
 }
 
 .section {
-        margin: 10px 0;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 /*-----Header-----*/
@@ -87,10 +91,6 @@ main {
 .container_filepanel {
     width: 60vw;
     border-right: 1px solid gray;
-}
-
-.container_fileview {
-    width: 20vw;
 }
 
 .container_path p {
@@ -155,6 +155,43 @@ main {
     border-bottom: 2px solid #eee;
 }
 
+/*-----File preview-----*/
+
+.container_fileview {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file_preview__name {
+    font-size: 25px;
+    margin: 10px auto;
+}
+
+.file_preview__iframe {
+    height: 200px;
+    margin: 30px auto;
+    display: flex;
+
+}
+
+.file_preview__main,
+.file_update__options {
+    margin: 20px auto;
+}
+
+.preview_info {
+    line-height: 2em;
+    font-weight: 500;
+    color: #939393;
+}
+
+.preview_info span {
+    margin-left: 20px;
+
+    
+}
 
 /*-----Buttons-----*/
 
@@ -187,13 +224,21 @@ button {
 .btn_transparent {
     background: transparent;
     border: none;
+    
 }
 
 .btn_remove i,
 .btn_upload i,
 .btn_search i {
-    color: white;
     font-size: 2.5em;
+}
+
+.btn_nav i{
+    color: white;
+}
+
+.btn_preview i {
+    color: #5068f1;
 }
 
 .btn_submit {
@@ -289,14 +334,6 @@ input {
 /*-----File-upload input-----*/
 
 .input_file {
-    /* width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    visibility: hidden; */
-    /* width: 85px; */
     position: relative;
 }
 
@@ -304,7 +341,6 @@ label[for="file"] {
     font-size: 14px;
     font-weight: 600;
     color: #fff;
-    /* background-color: black; */
     display: inline-block;
     transition: all .5s;
     cursor: pointer;
@@ -312,12 +348,10 @@ label[for="file"] {
     text-transform: uppercase;
     width: fit-content;
     text-align: center;
-    /* content: "url(../img/upload.png)", */
 }
 
 label[for="file"] img {
     color:#5068f1;
-    /* padding-right: 10px; */
     position: absolute;
     font-size: 5em;
     background-color: white;
