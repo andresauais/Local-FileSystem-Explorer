@@ -239,7 +239,8 @@ button {
 .btn_upload i,
 .btn_search i,
 .btn_rename i,
-.btn_move i{
+.btn_move i,
+.btn_move-file i{
     font-size: 2.5em;
 }
 
@@ -275,14 +276,18 @@ button {
 
 .container_modal__create-dir,
 .container_modal__upload-file,
-.container_modal__delete {
+.container_modal__delete,
+.container_modal__move-dir,
+.container_modal__move-file{
     display: none;
    
 }
 
 .container_modal__create-dir.active,
 .container_modal__upload-file.active,
-.container_modal__delete.active {
+.container_modal__delete.active,
+.container_modal__move-dir.active,
+.container_modal__move-file.active {
     display: flex;
     flex-direction: column;
     justify-content: center;

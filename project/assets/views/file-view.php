@@ -8,6 +8,14 @@ if(isset($_GET['file'])):
     <section class="section">
         <p class="file_preview__name"><?=$v->basename?></p>
         <!-- <iframe class="file_preview__iframe"></iframe> -->
+        <!-- <?php
+            // $dir = $_GET['dir'];
+            // $ext = explode(".",$v->basename);
+            // if($ext[1] == "jpg"){
+            //     echo "../..$dir/$v->basename";
+            //     echo "<img class='' src='../..$dir/$v->basename' alt='../../..$dir/$v->basename'/>";
+            // };
+        ?> -->
         <img class="file_preview__iframe" src="<?=$v->image?>" alt=""/>
 
         <div class="file_preview__main">
@@ -19,7 +27,7 @@ if(isset($_GET['file'])):
         <div class="file_update__options">
         <button class="btn_delete-directory btn_transparent btn_preview"><i class='bx bx-trash'></i></button>
             <button class="btn_remove btn_transparent btn_preview"><i class='bx bx-rename'></i></button>
-            <button class="btn_remove btn_transparent btn_preview"><i class='bx bx-move-horizontal'></i></button>
+            <button class="btn_move-file btn_transparent btn_preview"><i class='bx bx-move-horizontal'></i></button>
         </div>
     </section>
 </article>

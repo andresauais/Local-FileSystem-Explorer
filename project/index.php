@@ -21,8 +21,9 @@
     include './assets/views/modal-create-dir.php';
     include './assets/views/modal-upload-file.php';
     include './assets/views/modal-delete.php';
+    include './assets/views/modal-move-dir.php';
+    include './assets/views/modal-move-file.php';
     include 'assets/helpers/getDir.php'; 
-
     ?>
   </main>
   <script type="text/javascript" src="assets/scripts/events.js"></script>

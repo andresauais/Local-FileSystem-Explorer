@@ -15,6 +15,16 @@ $('.btn_delete-directory').on('click', function(e){
     $('.container_modal__delete').addClass('active');
 })
 
+//open modal for moving dir
+$('.btn_move').on('click', function(e){
+    e.preventDefault();
+    $('.container_modal__move-dir').addClass('active');
+})
+//open modal for moving dir
+$('.btn_move-file').on('click', function(e){
+    e.preventDefault();
+    $('.container_modal__move-file').addClass('active');
+})
 //To be used for all modal closing events
 $('.btn_close').on('click',function(e){
     e.preventDefault();
