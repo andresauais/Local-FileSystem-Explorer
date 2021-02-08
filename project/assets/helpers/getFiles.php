@@ -1,8 +1,11 @@
 <?php
 
 $dir = '../'. (isset($_GET['dir']) ? $_GET['dir'] : "root");
+$search = (isset($_GET['search']) ? $_GET['search'] : "");//file searched taken from url
 $scanDir = scandir($dir);
-$currentDir = array_slice( $scanDir, 2 );
+/*ternary expression, if the search element is empty, will return the files in directory 
+if user searched for something the scanDir array is filtered according to the search*/
+$currentDir = (empty($search) ? array_slice( $scanDir, 2 ) : filterSearch($scanDir, $search));
 
 //create a Fileinfo class to store file information
 class Fileinfo {
@@ -94,6 +97,15 @@ function getFileImage($extension){
     return $fileImage;
 }
 
-
+//filter search function that returns an array with elements containing what the user search for
+function filterSearch($scandir, $search){
+    $searchArray = array();
+    foreach($scandir as $element){
+        if(str_contains($element, $search)){
+            array_push($searchArray, $element);
+        }
+    }
+    return $searchArray;
+}
 
 ?>
