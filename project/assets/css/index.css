@@ -236,6 +236,8 @@ button {
 
 .btn_delete-directory i,
 .btn_remove i,
+.btn_rename i,
+.btn_move i,
 .btn_upload i,
 .btn_search i,
 .btn_rename i,
@@ -278,7 +280,8 @@ button {
 .container_modal__upload-file,
 .container_modal__delete,
 .container_modal__move-dir,
-.container_modal__move-file{
+.container_modal__move-file,
+.container_modal__rename {
     display: none;
    
 }
@@ -287,7 +290,8 @@ button {
 .container_modal__upload-file.active,
 .container_modal__delete.active,
 .container_modal__move-dir.active,
-.container_modal__move-file.active {
+.container_modal__move-file.active,
+.container_modal__rename.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -328,6 +332,15 @@ button {
     
 }
 
+.modal_info__currentfilename {
+    margin-bottom: 30px;
+}
+
+.modal_info__currentfilename span {
+    color: #939393;
+    margin: 10px 0;
+}
+
 /*-----Forms-----*/
 
 .form_search {
@@ -339,6 +352,7 @@ button {
 
 input {
     outline: none;
+    width: 100%;
 }
 
 .input_text {
