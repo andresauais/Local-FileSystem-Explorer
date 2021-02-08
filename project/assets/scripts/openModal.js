@@ -20,13 +20,22 @@ $('.btn_move').on('click', function(e){
     e.preventDefault();
     $('.container_modal__move-dir').addClass('active');
 })
-//open modal for moving dir
+
+//open modal for moving file
 $('.btn_move-file').on('click', function(e){
     e.preventDefault();
     $('.container_modal__move-file').addClass('active');
 })
+
+//Opens modal for renaming files
+$('.btn_rename').on('click', function(e){
+    e.preventDefault();
+    $('.container_modal__rename').addClass('active');
+})
+
 //To be used for all modal closing events
 $('.btn_close').on('click',function(e){
     e.preventDefault();
     $(e.target.closest('article')).removeClass('active');
 })
+

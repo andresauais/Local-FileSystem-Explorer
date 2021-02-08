@@ -23,12 +23,13 @@
     include './assets/views/modal-delete.php';
     include './assets/views/modal-move-dir.php';
     include './assets/views/modal-move-file.php';
+    include './assets/views/modal-rename.php';
     include 'assets/helpers/getDir.php'; 
     ?>
   </main>
   <script type="text/javascript" src="assets/scripts/events.js"></script>
   <script type="text/javascript" src="assets/scripts/openModal.js"></script>
-  <script type="text/javascript" src="assets/scripts/openLinks.js"></script>
+  <script type="text/javascript" src="assets/scripts/updateButtons.js"></script>
 <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
 </body>
 </html>
