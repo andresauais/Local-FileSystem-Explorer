@@ -23,6 +23,14 @@
                 <!-- Loop iterates over filesArray and prints a file_info__group for each Fileinfo object-->
                 <?php 
                     foreach($filesArray as $k => $v):
+                        //if true, open folder
+                        if ($v->link == true){
+                            $v->link = "index.php?dir=".(isset($_GET['dir']) ? $_GET['dir'].'/'.$v->basename : "root/".$v->basename);
+                        } 
+                        //if false, pass "&file=" query param
+                        else {
+                            $v->link = "index.php?dir=".(isset($_GET['dir']) ? $_GET['dir'] : "root/")."&file=".$v->basename;
+                        }
                 ?>
                     
                 <div class="file_info__group">
@@ -30,7 +38,7 @@
                     <div class="file_info__icon">
                         <img src="<?=$v->image?>" alt=""/>
                     </div>
-                    <p class="file_info__name"><?=$v->name?></p>
+                    <a class="file_info__name" href="<?=$v->link?>"><?=$v->name?></a>
                     <p class="file_info__type"><?=$v->type?></p>
                     <p class="file_info__size"><?=$v->size?></p>
                     <p class="file_info__created"><?=$v->created?></p>
@@ -41,6 +49,12 @@
                 endforeach; 
                 ?>
                 <!-- End of foreach loop -->
+
+                <?php
+                
+                
+                
+                ?>
 
             </div>
         </section>

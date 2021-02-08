@@ -9,13 +9,13 @@
             <form class="form_search" method="POST" action="./assets/helpers/search.php">
                 <input class="input_text" type="text" name="search-file"/>
                 <input type='hidden' name='dir' value='<?php echo (isset($_GET['dir']) ? $_GET['dir'] : "root");?>'/>
-                <button type="submit" class="btn_search btn_transparent">
+                <button type="submit" class="btn_search btn_transparent btn_nav">
                     <i class='bx bx-search' ></i>
                 </button>
             </form> 
         
-            <button class="btn_remove btn_transparent"><i class='bx bx-trash'></i></button>
-            <button class="btn_upload btn_transparent"><i class='bx bx-upload' ></i></button>
+            <button class="btn_remove btn_transparent btn_nav"><i class='bx bx-trash'></i></button>
+            <button class="btn_upload btn_transparent btn_nav"><i class='bx bx-upload' ></i></button>
         </div>
     </nav>
 </header>
