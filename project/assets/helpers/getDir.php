@@ -1,36 +1,19 @@
 <?php
-if (isset($_POST['name'])){
-  $n= $_POST['name'];
-  $name = strtolower($n);
-  $path = scanAllDir($name);
+if (isset($_POST['path'], $_POST['name'])){
+  $name = $_POST['name'];
+  $path = $_POST['path'];
   $a = scandir($path);
   for($i = 2; $i < count($a); $i++){
-  echo "
+    if(is_dir($path . '/' . $a[$i])){
+      echo "
     <li>
       <div class='list-item'>
         <i class='bx bx-right-arrow'></i>
-        <p><i class='bx bxs-folder-open'></i>$a[$i]</p>
+        <a href='index.php?dir=$name/$a[$i]'><i class='bx bxs-folder'></i>$a[$i]</a>
       </div>
       <ul class='directoryRoot-children'></ul>
     </li>
 ";
-  }
-}
-
-function scanAllDir($name) {
-  $path = "../../..";
-  return pathE($path, $name);
-}
-
-function pathE($path, $name){
-  foreach(scandir($path) as $element){
-    if($element == $name){
-      $elPath = $path . '/' . $name;
-      return $elPath;
-    }
-    else{
-      $elPath = $path . '/' . $element;
-      pathE($elPath, $name);
     }
   }
 }

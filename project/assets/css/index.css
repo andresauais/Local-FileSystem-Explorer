@@ -1,36 +1,35 @@
-/*Directory panel styles*/
+/*-----Directory panel styles-----*/
 #directoryPanel{
     border-right: 1px solid gray;
     height: 100vh;
     width: 20vw;
-  }
-  #directoryTree{
+}
+#directoryTree{
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-  .directoryRoot-children{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.directoryRoot-children{
     list-style-type: none;
-  }
-  .list-item{
+}
+.list-item{
     display: flex;
     flex-direction: row;
     margin: 0;
     padding: 2% 0% 2% 0%;
-  }
-  .list-item_p{
+}
+.list-item_p{
     margin: 0;
-  }
-  .bx-right-arrow, .bxs-folder-open{
+}
+.bx-right-arrow,
+.bxs-folder-open,
+.bx-down-arrow,
+.bxs-folder{
     color: gray;
   }
   
-  *{
-      margin: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-      color: #3c3c3c;
-  }
 
 *{
     margin: 0;
@@ -45,7 +44,11 @@ main {
 }
 
 .section {
-        margin: 20px 0;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container_navbar {
@@ -58,13 +61,32 @@ main {
     color: white;
 }
 
+.container_navbar {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    padding: 0 20px 0 10px;
+}
+
+.container_navbar__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar_actions__left,
+.navbar_actions__right {
+    display: flex;
+    align-items: center;
+}
+
+
+/*-----Filepanel-----*/
+
 .container_filepanel {
     width: 60vw;
     border-right: 1px solid gray;
-}
-
-.container_fileview {
-    width: 20vw;
 }
 
 .container_path p {
@@ -90,15 +112,15 @@ main {
     width: 45%;
     margin-left: 5%
 }
-
-.tags_type,
 .tags_size,
 .file_info__type,
 .file_info__size {
     width: 10%;
-    
 }
-
+.tags_type,
+.file_info__type {
+    width: 10%;
+}
 .tags_created,
 .tags_modified,
 .file_info__created,
@@ -111,7 +133,7 @@ main {
     
 }
 .file_info__icon img {
-    height: 40px;
+    width: 35px;
 }
 
 .file_info__name {
@@ -123,7 +145,241 @@ main {
     border-bottom: 2px solid #eee;
 }
 
-.container_files {
+/*-----File preview-----*/
+
+.container_fileview {
+    margin: 20px auto;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
+    align-items: center;
 }
+
+.file_preview__name {
+    font-size: 25px;
+    margin: 10px auto;
+}
+
+.file_preview__iframe {
+    height: 200px;
+    margin: 30px auto;
+    display: flex;
+
+}
+
+.file_preview__main,
+.file_update__options {
+    margin: 20px auto;
+}
+
+.preview_info {
+    line-height: 2em;
+    font-weight: 500;
+    color: #939393;
+}
+
+.preview_info span {
+    margin-left: 20px;
+
+    
+}
+
+/*-----Buttons-----*/
+
+button {
+    cursor: pointer;
+}
+
+.btn_add {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    color: #5068f1;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 0 18px;
+    margin-right: 1vw;
+
+}
+
+.btn_add i {
+    color: #5068f1;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+.btn_transparent {
+    background: transparent;
+    border: none;
+    
+}
+
+.btn_delete-directory i,
+.btn_remove i,
+.btn_rename i,
+.btn_move i,
+.btn_upload i,
+.btn_search i,
+.btn_rename i,
+.btn_move i,
+.btn_move-file i{
+    font-size: 2.5em;
+}
+
+.btn_nav i{
+    color: white;
+}
+
+.btn_preview i {
+    color: #5068f1;
+}
+
+.btn_submit {
+    color: white;
+    background-color: #5068f1;
+    border-radius:40px;
+    border: none;
+    margin: 10px 0;
+    height: 40px;
+    padding: 0 18px;
+}
+
+/*----- Modals -----*/
+
+.container_modal__background {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #5068f198;
+}
+
+.container_modal__create-dir,
+.container_modal__upload-file,
+.container_modal__delete,
+.container_modal__move-dir,
+.container_modal__move-file,
+.container_modal__rename {
+    display: none;
+   
+}
+
+.container_modal__create-dir.active,
+.container_modal__upload-file.active,
+.container_modal__delete.active,
+.container_modal__move-dir.active,
+.container_modal__move-file.active,
+.container_modal__rename.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_modal__form {
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 25vw;
+}
+
+.modal_header {
+    background-color: #5068f1;
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.modal_header .btn_close i {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    z-index: 2;
+    color: white;
+    font-size: 3em;
+}
+
+.modal_form__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 50px;
+    
+}
+
+.modal_info__currentfilename {
+    margin-bottom: 30px;
+}
+
+.modal_info__currentfilename span {
+    color: #939393;
+    margin: 10px 0;
+}
+
+/*-----Forms-----*/
+
+.form_search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2vw;
+}
+
+input {
+    outline: none;
+    width: 100%;
+}
+
+.input_text {
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #5068f1;
+    margin: 10px 0;
+}
+
+/*-----File-upload input-----*/
+
+.input_file {
+    position: relative;
+}
+
+label[for="file"] {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+}
+
+label[for="file"] img {
+    color:#5068f1;
+    position: absolute;
+    font-size: 5em;
+    background-color: white;
+    left:50px;
+    top: 80px;
+    z-index: 10;
+    width: 90px;
+    
+    
+}
+
+.input_search {
+    border: none;
+    
+}
+
