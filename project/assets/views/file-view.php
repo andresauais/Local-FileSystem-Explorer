@@ -8,15 +8,41 @@ if(isset($_GET['file'])):
     <section class="section">
         <p class="file_preview__name"><?=$v->basename?></p>
         <!-- <iframe class="file_preview__iframe"></iframe> -->
-        <!-- <?php
-            // $dir = $_GET['dir'];
-            // $ext = explode(".",$v->basename);
-            // if($ext[1] == "jpg"){
-            //     echo "../..$dir/$v->basename";
-            //     echo "<img class='' src='../..$dir/$v->basename' alt='../../..$dir/$v->basename'/>";
-            // };
-        ?> -->
-        <img class="file_preview__iframe" src="<?=$v->image?>" alt=""/>
+        <?php
+            $dir = $_GET['dir'];
+            $ext = explode(".",$v->basename);
+            if($ext[1] == "png" || $ext[1] == "jpg"){
+                $dirFile = "../$dir/$v->basename";
+                if(file_exists($dirFile)){
+                    $imageData = base64_encode(file_get_contents($dirFile));
+                    $src = 'data: '.mime_content_type($dirFile).';base64,'.$imageData;
+                    echo '<img class="file_preview__iframe" src="' . $src . '">';
+                }
+            }
+            else if($ext[1] == "mp3"){
+                echo '<img class="file_preview__iframe" src="'. $v->image .'" alt=""/>';
+                $dirFile = "../$dir/$v->basename";
+                if(file_exists($dirFile)){
+                    $imageData = base64_encode(file_get_contents($dirFile));
+                    $src = 'data: '.mime_content_type($dirFile).';base64,'.$imageData;
+                    echo '<audio controls>
+                    <source src="'. $src .'" type="audio/ogg"></audio>';
+                }
+            }
+            else if($ext[1] == "mp4"){
+                $dirFile = "../$dir/$v->basename";
+                if(file_exists($dirFile)){
+                    $imageData = base64_encode(file_get_contents($dirFile));
+                    $src = 'data: '.mime_content_type($dirFile).';base64,'.$imageData;
+                    echo '<video controls>
+                    <source src="'. $src .'" type="video/ogg"></video>';
+                }
+            }
+            else{
+                echo '<img class="file_preview__iframe" src="'. $v->image .'" alt=""/>';
+            }
+        ?>
+        
 
         <div class="file_preview__main">
             <p class="preview_info">Type <span><?=$v->type?></span></p>

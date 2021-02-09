@@ -403,3 +403,11 @@ label[for="file"] img {
     border: none;
     
 }
+
+audio{
+    max-width: 100%;
+}
+
+video{
+    max-width: 100%;
+}
