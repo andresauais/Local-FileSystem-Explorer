@@ -97,33 +97,33 @@ function getFileImage($extension){
         case "pdf":
             $fileImage = "./assets/img/pdf.png";
             break;
-        // case "csv":
-        //     $fileImage = "./assets/img/csv.png";
-        //     break;
-        // case "ppt":
-        //     $fileImage = "./assets/img/ppt.png";
-        //     break;
-        // case "odt":
-        //     $fileImage = "./assets/img/odt.png";
-        //     break;
-        // case "zip":
-        //     $fileImage = "./assets/img/zip.png";
-        //     break;
-        // case "rar":
-        //     $fileImage = "./assets/img/rar.png";
-        //     break;
-        // case "exe":
-        //     $fileImage = "./assets/img/exe.png";
-        //     break;
-        // case "svg":
-        //     $fileImage = "./assets/img/svg.png";
-        //     break;
-        // case "mp3":
-        //     $fileImage = "./assets/img/mp3.png";
-        //     break;
-        // case "mp4":
-        //     $fileImage = "./assets/img/mp4.png";
-        //     break;
+        case "csv":
+            $fileImage = "./assets/img/csv.png";
+            break;
+        case "ppt":
+            $fileImage = "./assets/img/ppt.png";
+            break;
+        case "odt":
+            $fileImage = "./assets/img/odt.png";
+            break;
+        case "zip":
+            $fileImage = "./assets/img/zip.png";
+            break;
+        case "rar":
+            $fileImage = "./assets/img/rar.png";
+            break;
+        case "exe":
+            $fileImage = "./assets/img/exe.png";
+            break;
+        case "svg":
+            $fileImage = "./assets/img/svg.png";
+            break;
+        case "mp3":
+            $fileImage = "./assets/img/mp3.png";
+            break;
+        case "mp4":
+            $fileImage = "./assets/img/mp4.png";
+            break;
         case "":
             $fileImage = "./assets/img/folder.png";
             break;
