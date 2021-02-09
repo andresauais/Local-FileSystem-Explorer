@@ -31,6 +31,8 @@
   }
   
 
+/*----- Body -----*/
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -51,12 +53,21 @@ a {
     text-decoration: none;
 }
 
-.container_navbar {
+/*-----Header-----*/
+
+.container_header {
     height:100px;
     background-color: #5068f1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.container_navbar h1 {
+.container_brand {
+    width: 20vw;
+}
+
+.container_brand h1 {
     padding: 20px;
     color: white;
 }
@@ -98,6 +109,13 @@ a {
     height: 40px;
     background-color: #f7f7f7;
     border-bottom: 2px solid #eee;
+    padding: 0 10px;
+}
+
+.container_files {
+    display: flex;
+    flex-direction:column;
+    margin: 0 10px;
 }
 
 .container_tags,
@@ -113,7 +131,6 @@ a {
     margin-left: 5%
 }
 .tags_size,
-.file_info__type,
 .file_info__size {
     width: 10%;
 }
@@ -152,6 +169,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.container_fileview section {
+    width: 200px;
 }
 
 .file_preview__name {
@@ -382,4 +403,3 @@ label[for="file"] img {
     border: none;
     
 }
-
